@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro</title>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="refresh" content="60"> -->
+		<meta name="description" content="Jogos simples que prometem uma boa diversão !">
+		<meta name="author" content="Luana Chiodini e Nathalia Kanis">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="icone.png">
+		<link rel="stylesheet" type="text/css" href="../static/css/pagina_inicial.css">
+	</head>
+	<body>
+		<nav>
+			<ul class="itens_barra">
+			  	<b><a href="pagina_inicial" class="botao">Início</a></b>
+			  	<b><a href="jogos" class="botao">Jogos</a></b>
+			  	<b><a href="cadastro" class="botao">Cadastro</a></b>
+			  	<b><a href="informacoes" class="botao">Sobre nós</a></b>
+		  	</ul>
+		</nav>
+		<div id="formulario">
+			<h4>Cadastro</h4>
+			<form method="POST" action="">
+			<label>Nome Completo:</label>
+			    <input type="text" name="nome" placeholder="Digite seu nome...">
+
+			    <label>Email:</label>
+			    <input type="text" name="email" placeholder="Digite seu email...">
+
+			    <label>Senha:</label>
+			      <input type="password" name="senha" placeholder="Digite sua senha...">
+
+			    <label>País:</label>
+			      <select name="pais">
+			        <option value="australia">Austrália</option>
+			        <option value="brasil" selected="selected">Brasil</option>
+			        <option value="canada">Canadá</option>
+			        <option value="uruguai">Uruguai</option>
+			        <option value="uruguai">Venezuela</option>
+			    </select>
+			  
+			    <input type="submit" value="Cadastrar">
+			    <input type="reset" name="limpar" value="Limpar">
+			  </form>
+		</div>
+		
+	</body>
+</html>

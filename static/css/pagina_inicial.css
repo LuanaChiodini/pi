@@ -1,0 +1,106 @@
+#logotipo {
+	height: 250px;
+	width: 500px;
+	margin-top: 0px;
+	margin-left: 400px;
+}
+
+#barra {
+	height:50;
+	width: 100;
+	background-color: turquoise;
+	color: turquoise;
+}
+
+header {
+	background-color: white;
+	background-image: url("play.jpg");
+	background-repeat: none;
+	height: 225px;
+	width: 100%;
+}
+
+nav {
+	display: block;
+	width: 100%;
+	height: 220px;
+}
+
+.itens_barra {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: turquoise;
+	color: white;
+	position: relative;
+	top: 0;
+	width: 100%;
+	font-family: Helvetica;
+	font-size: 19px
+}
+
+.botao {
+	width: 20%;
+}
+
+a:link, a:visited {
+	background-color: turquoise;
+	color: white;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: rgb(0, 179, 179);
+}
+
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset] {
+  width: 100%;
+  background-color: turquoise;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  rgb(0, 179, 179);
+}
+
+#formulario {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 40%;
+
+}
+
+#texto {
+	width: 50%;
+	height: 20%;
+	background-color: gray;
+}
+
+footer {
+	background-color: gray;
+	text-align: center;
+	color: white;
+	padding: 10px
+	width: 100%;
+	height: 65%;
+}
