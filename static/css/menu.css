@@ -1,25 +1,4 @@
-nav {
-	display: block;
-	width: 100%;
-	height: 50px;
-}
-
-.itens_barra {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: rgb(0,42,97);
-	color: white;
-	position: relative;
-	top: 0;
-	width: 100%;
-	font-family: Helvetica;
-	font-size: 19px
-}
-
-.itens_barra a:link, .itens_barra a:visited {
-	background-color: rgb(0,42,97);
+.botao a:link, a:visited {
 	color: white;
 	padding: 14px 25px;
 	text-align: center;
@@ -27,10 +6,8 @@ nav {
 	display: inline-block;
 }
 
-.itens_barra a:hover, .itens_barra a:active {
-	background-color: rgb(0,51,117);
+.meu_footer-bg{
+	background-color: rgb(52, 58, 64);
+	color: rgb(154,157,154);
 }
 
-.botao {
-	width: 21.1%;
-}

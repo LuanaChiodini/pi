@@ -1,0 +1,30 @@
+.conteudo_luana {
+	width: 40%;
+	padding: 10px;
+	text-decoration: justify;
+	float: right;
+	position: absolute;
+	top:60%;
+	left: 50%;
+}
+
+.conteudo_nathalia {
+	width: 40%;
+	padding: 10px;
+	text-decoration: justify;
+	float: left;
+	position: absolute;
+	top: 140%;
+	left: 5%;
+}
+
+.bloco_luana {
+	padding: 25px;
+	left: 20%;
+	background-color: lightgray;
+}
+
+.bloco_nathalia {
+	padding: 25px;
+	float: right;
+}
