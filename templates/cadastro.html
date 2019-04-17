@@ -13,6 +13,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
 		<div class="jumbotron text-center" style="margin-bottom:0"> </div>
@@ -35,34 +36,57 @@
 			</div>
 			<a href="/cadastro" class="botao"> <button type="button" class="btn btn-outline-success"><i class="fas fa-sign-in-alt"></i> Cadastre-se</button></a>
 		</nav>
-		<h3>Cadastro</h3>
-		<div class="container d-flex justify-content-center">
-			<div class="formulario">
-				<form action="">
-				<label>Nome Completo:</label>
-				    <input type="text" name="nome" placeholder="Digite seu nome...">
-
-				    <label>Email:</label>
-				    <input type="text" name="email" placeholder="Digite seu email...">
-
-				    <label>Senha:</label>
-				      <input type="password" name="senha" placeholder="Digite sua senha...">
-
-				    <label>País:</label>
-				      <select name="pais">
-				        <option value="australia">Austrália</option>
-				        <option value="brasil" selected="selected">Brasil</option>
-				        <option value="canada">Canadá</option>
-				        <option value="uruguai">Uruguai</option>
-				        <option value="venezuela">Venezuela</option>
-						<option value="outros">Outros</option>
-				    </select>
-				  
-				    <input type="submit" value="Cadastrar">
-				    <input type="reset" name="limpar" value="Limpar">
-				  </form>
-			</div>
+		<br>
+		<div class="container w-50">
+  			<h2>Cadastro</h2>
+			<form action="/cadastrar" class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="uname">Nome Completo:</label>
+					<input type="text" class="form-control" id="uname" placeholder="Digite seu nome completo" name="uname" required>
+					<div class="valid-feedback">Válido.</div>
+					<div class="invalid-feedback">Por favor preencha este campo.</div>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="text" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
+					<div class="valid-feedback">Válido.</div>
+					<div class="invalid-feedback">Por favor preencha este campo.</div>
+				</div>
+				<div class="form-group">
+					<label for="pwd">Senha:</label>
+					<input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="pswd" required>
+					<div class="valid-feedback">Válido.</div>
+					<div class="invalid-feedback">Por favor preencha este campo.</div>
+				</div>
+				<div class="form-group form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" name="remember" required> Eu concordo com os termos do site.
+						<div class="valid-feedback">Válido.</div>
+						<div class="invalid-feedback">Selecione este campo para continuar.</div>
+					</label>
+				</div>
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+				<button type="reset" class="btn btn-primary">Limpar</button>
+			</form>
 		</div>
+
+		<script>
+		(function() {
+			'use strict';
+			window.addEventListener('load', function() {
+				var forms = document.getElementsByClassName('needs-validation');
+				var validation = Array.prototype.filter.call(forms, function(form) {
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+		})();
+		</script>
 		<br>
 		<footer class="page-footer font-small blue meu_footer-bg">
 			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis

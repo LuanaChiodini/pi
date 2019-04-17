@@ -45,56 +45,6 @@
 			<a href="/cadastro" class="botao"> <button type="button" class="btn btn-outline-success"><i class="fas fa-sign-in-alt"></i> Cadastre-se</button></a>
 		</nav>
 		<br>
-		<div class="container w-50">
-  			<h2>Cadastro</h2>
-			<form action="/cadastrar" class="needs-validation" novalidate>
-				<div class="form-group">
-					<label for="uname">Nome Completo:</label>
-					<input type="text" class="form-control" id="uname" placeholder="Digite seu nome completo" name="uname" required>
-					<div class="valid-feedback">Válido.</div>
-					<div class="invalid-feedback">Por favor preencha este campo.</div>
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="text" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
-					<div class="valid-feedback">Válido.</div>
-					<div class="invalid-feedback">Por favor preencha este campo.</div>
-				</div>
-				<div class="form-group">
-					<label for="pwd">Senha:</label>
-					<input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="pswd" required>
-					<div class="valid-feedback">Válido.</div>
-					<div class="invalid-feedback">Por favor preencha este campo.</div>
-				</div>
-				<div class="form-group form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" name="remember" required> Eu concordo com os termos do site.
-						<div class="valid-feedback">Válido.</div>
-						<div class="invalid-feedback">Selecione este campo para continuar.</div>
-					</label>
-				</div>
-				<button type="submit" class="btn btn-primary">Cadastrar</button>
-				<button type="reset" class="btn btn-primary">Limpar</button>
-			</form>
-		</div>
-
-<script>
-(function() {
-	'use strict';
-	window.addEventListener('load', function() {
-		var forms = document.getElementsByClassName('needs-validation');
-		var validation = Array.prototype.filter.call(forms, function(form) {
-			form.addEventListener('submit', function(event) {
-				if (form.checkValidity() === false) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
-				form.classList.add('was-validated');
-			}, false);
-		});
-	}, false);
-})();
-</script>
 		<br>
 		<footer class="page-footer font-small blue meu_footer-bg">
 			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis
