@@ -3,7 +3,7 @@
 	padding: 10px;
 	text-decoration: justify;
 	float: right;
-	position: absolute;
+	position: relative;
 	top:60%;
 	left: 50%;
 }
@@ -13,7 +13,7 @@
 	padding: 10px;
 	text-decoration: justify;
 	float: left;
-	position: absolute;
+	position: relative;
 	top: 140%;
 	left: 5%;
 }
