@@ -39,10 +39,10 @@
 		<br>
 		<div class="container w-50">
   			<h2>Cadastro</h2>
-			<form action="/cadastrar" class="needs-validation" novalidate>
+			<form action="/cadastrar" method="POST" class="needs-validation" novalidate>
 				<div class="form-group">
 					<label for="uname">Nome Completo:</label>
-					<input type="text" class="form-control" id="uname" placeholder="Digite seu nome completo" name="uname" required>
+					<input type="text" class="form-control" id="uname" placeholder="Digite seu nome completo" name="nome" required>
 					<div class="valid-feedback">Válido.</div>
 					<div class="invalid-feedback">Por favor preencha este campo.</div>
 				</div>
@@ -54,7 +54,7 @@
 				</div>
 				<div class="form-group">
 					<label for="pwd">Senha:</label>
-					<input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="pswd" required>
+					<input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="senha" required>
 					<div class="valid-feedback">Válido.</div>
 					<div class="invalid-feedback">Por favor preencha este campo.</div>
 				</div>
