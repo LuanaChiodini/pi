@@ -16,13 +16,14 @@ class Usuario(BaseModel):
 def cadastrar_usuario(nome, email, senha):
 	usuario = Usuario.create(nome=nome, email=email, senha=senha)
 	usuario.save()
+	
+if __name__ == "__main__":
+	if os.path.exists(arq):
+		os.remove(arq)
 
-if os.path.exists(arq):
-	os.remove(arq)
+	try:
+		db.connect()
+		db.create_tables([])
 
-try:
-	db.connect()
-	db.create_tables([])
-
-except OperationError as erro:
-		print("erro")
+	except OperationError as erro:
+			print("erro")
