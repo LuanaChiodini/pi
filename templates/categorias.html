@@ -33,7 +33,20 @@
 					</li>    
 				</ul>
 			</div>
-			<a href="/cadastro" class="botao"> <button type="button" class="btn btn-outline-success"><i class="fas fa-sign-in-alt"></i> Cadastre-se</button></a>
+			<a href="/cadastro" class="botao"> <button type="button" class="btn btn-outline-success">Cadastre-se</button></a>
+			{% if session["usuario"]: %}
+			<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/logout"><i class="fa fa-sign-out"></i> Logout</a>
+					</li>
+			</ul>
+			{% else: %}
+			<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/form_login"><i class="fas fa-sign-in-alt"></i> Login</a>
+					</li>
+			</ul>
+			{% endif %}
 		</nav>
 		<br>
 		<div class="container">

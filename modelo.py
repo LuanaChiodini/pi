@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
 	try:
 		db.connect()
-		db.create_tables([])
+		db.create_tables([Usuario])
 
 	except OperationError as erro:
 			print("erro")
