@@ -36,16 +36,29 @@ def mostrar_tabuleiro( tabuleiro ):
 	print()
 
 def verificar_vitoria( tabuleiro ):
+	vertical = tabuleiro[0]
+	for i in range(3):
+		v = 0
+		if vertical[i] != "v":
+			for linha in tabuleiro:
+				if linha[i] == vertical[i]:
+					v += 1
+		if v == 3:
+			print( vertical[i], "ganhou" )
+			return vertical[i]
+
 	for campo in tabuleiro:
+		print(campo)
 		horizontal = campo[0]
-		c = 0
+		h = 0
 		for item in campo:
 			if item != "v":
 				if horizontal == item:
-					c += 1
-		if c == 3:
+					h += 1
+		if h == 3:
 			print( horizontal, "ganhou" )
 			return horizontal
+	print()
 
 
 while True:
