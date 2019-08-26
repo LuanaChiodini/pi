@@ -1,6 +1,7 @@
 import pygame
 
 pygame.init()
+pygame.font.init()
 
 comprimento = 600
 altura = 600
@@ -9,6 +10,16 @@ tela = pygame.display.set_mode( ( comprimento, altura ) )
 tabuleiro = [ ["v", "v", "v"], ["v", "v", "v"], ["v", "v", "v"] ]
 simbolo = "X"
 pos_x, pos_y = 0, 0
+game_start = False
+fonte = pygame.font.SysFont('Comic Sans MS', 50)
+iniciar = fonte.render("Iniciar", False, (255, 255, 255))
+creditos = fonte.render("Créditos", False, (255, 255, 255))
+
+def mostrar_menu(tela, x, y, iniciar, creditos):
+	pygame.draw.rect(tela, (255, 255, 255), (100, 150, 400, 100), 5)
+	pygame.draw.rect(tela, (255, 255, 255), (100, 300, 400, 100), 5)
+	tela.blit(iniciar, (245, 182))
+	tela.blit(creditos, (230, 332))
 
 def desenhar_simbolos( tela, simbolo, x, y, tabuleiro ):
 	for campo in range( len( tabuleiro ) ):
@@ -58,8 +69,11 @@ def verificar_vitoria( tabuleiro ):
 		if h == 3:
 			print( horizontal, "ganhou" )
 			return horizontal
-	print()
 
+	if (tabuleiro[0][0] == tabuleiro[1][1] and tabuleiro[0][0] == tabuleiro[2][2]) or ((tabuleiro[0][2] == tabuleiro[1][1] and tabuleiro[0][2] == tabuleiro[2][0])):
+		if tabuleiro[1][1] != "v":
+			print(tabuleiro[1][1], "ganhou")
+	print()
 
 while True:
 	for event in pygame.event.get():
@@ -75,15 +89,19 @@ while True:
 			pos_y = mouse_pos[1] // 200
 
 			tabuleiro, simbolo = alterar_tabuleiro( tabuleiro, pos_x, pos_y, simbolo )
-	
-	desenhar_simbolos( tela, simbolo, pos_x, pos_y, tabuleiro )
-	#mostrar_tabuleiro( tabuleiro )		
-	verificar_vitoria( tabuleiro )
-	
-	# Desenhar linha. Argumentos ( Onde você quer desenhar, cor, ponto inicial, ponto final )		
-	pygame.draw.line( tela, ( 250, 250, 250 ), ( 200, 0 ), ( 200, altura ) )		
-	pygame.draw.line( tela, ( 250, 250, 250 ), ( 400, 0 ), ( 400, altura ) )
-	pygame.draw.line( tela, ( 250, 250, 250 ), ( 0, 200 ), ( comprimento, 200 ) )
-	pygame.draw.line( tela, ( 250, 250, 250 ), ( 0, 400 ), ( comprimento, 400 ) )
+	if not game_start:			
+		mostrar_menu(tela, 0, 0, iniciar, creditos)
+		checar_botao(tela, x, y)
+
+	else:
+		desenhar_simbolos( tela, simbolo, pos_x, pos_y, tabuleiro )
+		#mostrar_tabuleiro( tabuleiro )		
+		verificar_vitoria( tabuleiro )
+		
+		# Desenhar linha. Argumentos ( Onde você quer desenhar, cor, ponto inicial, ponto final )		
+		pygame.draw.line( tela, ( 250, 250, 250 ), ( 200, 0 ), ( 200, altura ) )		
+		pygame.draw.line( tela, ( 250, 250, 250 ), ( 400, 0 ), ( 400, altura ) )
+		pygame.draw.line( tela, ( 250, 250, 250 ), ( 0, 200 ), ( comprimento, 200 ) )
+		pygame.draw.line( tela, ( 250, 250, 250 ), ( 0, 400 ), ( comprimento, 400 ) )
 
 	pygame.display.update()		
