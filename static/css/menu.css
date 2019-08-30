@@ -1,3 +1,7 @@
+html, body{
+	height: 100%;
+}
+
 .botao a:link, a:visited {
 	color: white;
 	padding: 14px 25px;
@@ -9,5 +13,10 @@
 .meu_footer-bg{
 	background-color: rgb(52, 58, 64);
 	color: rgb(154,157,154);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+  /*text-align: center;*/
 }
 
