@@ -4,7 +4,7 @@ from peewee import *
 arq = "usuario.db"
 db = SqliteDatabase(arq)
 
-class BaseModel():
+class BaseModel(Model):
 	class Meta():
 		database = db
 
@@ -13,17 +13,17 @@ class Usuario(BaseModel):
 	email = CharField()
 	senha = CharField()
 
-def cadastrar_usuario(nome, email, senha):
-	usuario = Usuario.create(nome=nome, email=email, senha=senha)
-	usuario.save()
+# def cadastrar_usuario(nome, email, senha):
+# 	usuario = Usuario.create(nome=nome, email=email, senha=senha)
+# 	usuario.save()
 	
-if __name__ == "__main__":
-	if os.path.exists(arq):
-		os.remove(arq)
+# if __name__ == "__main__":
+# 	if os.path.exists(arq):
+# 		os.remove(arq)
 
-	try:
-		db.connect()
-		db.create_tables([Usuario])
+# 	try:
+# 		db.connect()
+# 		db.create_tables([Usuario])
 
-	except OperationError as erro:
-			print("erro")
+# 	except OperationalError as erro:
+# 			print("erro")

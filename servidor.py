@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
-import modelo
+from modelo import db, Usuario
+import peewee
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "2222"
@@ -17,10 +18,11 @@ def cadastrar():
 	nome = request.form["nome"]
 	email = request.form["email"]
 	senha = request.form["senha"]
-	modelo.cadastrar_usuario(nome, email, senha)
-	todos = modelo.Usuario.select()
-	for i in todos:
-		print(i)
+	Usuario.create(nome=nome, email=email, senha=senha)
+	todos = Usuario.select()
+	# for i in todos:
+	# 	print(i.nome)
+	return redirect("/")
 
 @app.route("/sobre")
 def sobre():
@@ -38,9 +40,11 @@ def form_login():
 def login():
 	login = request.form["login"]
 	senha = request.form["senha"]
-	if login == "luana" and senha == "1234":
-		session["usuario"] = login
-		return redirect("/")
+	todos = Usuario.select()
+	for i in todos:
+		if i.nome == login and i.senha == senha:
+			session["usuario"] = login
+			return redirect("/")
 	else:
 		return render_template("cadastro.html")
 
@@ -48,5 +52,13 @@ def login():
 def logout():
 	session.pop("usuario")
 	return redirect("/")
+
+if __name__ == "__main__":
+	try:
+		db.connect()
+		db.create_tables([Usuario])
+
+	except peewee.OperationalError as erro:
+		print("ERROR: " + erro)
 
 app.run(debug=True, host="0.0.0.0")
