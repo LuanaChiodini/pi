@@ -16,6 +16,11 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
+		<div class="barra">barra</div>
+
+		<header>
+			<img class="img-responsive mx-auto d-block" src="../static/imagens/logo_play.png" >
+		</header>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -48,10 +53,17 @@
 			</ul>
 			{% endif %}
 		</nav>
-		<div class="container-fluid">
-			<div class="container-fluid">
+		<div class="container-perso">
+			<div class="row-perso">
+				<img src="../static/imagens/luaninha.jpg" class="nossas_fotos rounded-circle float-left img-fluid" alt="foto luana" width="400" height="450">
+				<div class="conteudo_luana">
+						<p>Somos Luana Chiodini e Nathalia Kanis, estudamos no Instituto Federal Catarinense - Campus Blumenau. Atualmente cursamos o ensino médio Integrado ao curso Técnico em Informática. Desenvolvemos esse site para a disciplina de Projeto Integrador.</p>
+					</div>
+				<img src="../static/imagens/nathalia.jpg" class="nossas_fotos rounded-circle float-right img-fluid" alt="foto luana" width="425" height="725">
+			</div>
+			<!-- <div class="container-fluid">
 				<div class="container-fluid">
-					<img src="../static/imagens/luaninha.jpg" class="rounded-circle float-left img-fluid" alt="foto luana" width="400" height="450">
+					<img src="../static/imagens/luaninha.jpg" class="nossas_fotos rounded-circle float-left img-fluid" alt="foto luana" width="400" height="450">
 					<div class="conteudo_luana">
 						<p>Somos Luana Chiodini e Nathalia Kanis, estudamos no Instituto Federal Catarinense - Campus Blumenau. Atualmente cursamos o ensino médio Integrado ao curso Técnico em Informática. Desenvolvemos esse site para a disciplina de Projeto Integrador.</p>
 					</div>
@@ -60,9 +72,9 @@
 
 			<div class="container-fluid">
 				<div class="container-fluid">
-						<img src="../static/imagens/nathalia.jpg" class="rounded-circle float-right img-fluid" alt="foto luana" width="425" height="725">
+						<img src="../static/imagens/nathalia.jpg" class="nossas_fotos rounded-circle float-right img-fluid" alt="foto luana" width="425" height="725">
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<footer class="page-footer font-small blue meu_footer-bg">
 			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis

@@ -38,9 +38,11 @@
 		<br>
 		<br>
 		<br>
+		<br>
+		<br>
+		<br>
 		<div class="container w-50">
   			<h2>Entrar</h2>
-  			<br>
 			<form action="/login" method="POST" class="needs-validation" novalidate>
 				<div class="form-group">
 					<label for="uname">Nome de usuário:</label>
@@ -57,34 +59,36 @@
 				<button type="submit" class="btn btn-outline-success">Entrar</button>
 			</form>
 		</div>
-
-		<script>
-		(function() {
-			'use strict';
-			window.addEventListener('load', function() {
-				var forms = document.getElementsByClassName('needs-validation');
-				var validation = Array.prototype.filter.call(forms, function(form) {
-					form.addEventListener('submit', function(event) {
-						if (form.checkValidity() === false) {
-							event.preventDefault();
-							event.stopPropagation();
-						}
-						form.classList.add('was-validated');
-					}, false);
-				});
-			}, false);
-		})();
-		</script>
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
+		<br>	
 		<br>
 		<br>
+		<br>	
 		<footer class="page-footer font-small blue meu_footer-bg">
 			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis
 			</div>
 		</footer>
+
+		<script>
+			(function() {
+				'use strict';
+				window.addEventListener('load', function() {
+					var forms = document.getElementsByClassName('needs-validation');
+					var validation = Array.prototype.filter.call(forms, function(form) {
+						form.addEventListener('submit', function(event) {
+							if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+							form.classList.add('was-validated');
+						}, false);
+					});
+				}, false);
+			})();
+		</script>
 	</body>
 </html>

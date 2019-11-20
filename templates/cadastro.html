@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
+		
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -52,6 +53,7 @@
 		<br>
 		<br>
 		<div class="container w-50">
+
   			<h2>Cadastro</h2>
 			<form action="/cadastrar" method="POST" class="needs-validation" novalidate>
 				<div class="form-group">
@@ -83,30 +85,32 @@
 				<button type="reset" class="btn btn-outline-success">Limpar</button>
 			</form>
 		</div>
-
-		<script>
-		(function() {
-			'use strict';
-			window.addEventListener('load', function() {
-				var forms = document.getElementsByClassName('needs-validation');
-				var validation = Array.prototype.filter.call(forms, function(form) {
-					form.addEventListener('submit', function(event) {
-						if (form.checkValidity() === false) {
-							event.preventDefault();
-							event.stopPropagation();
-						}
-						form.classList.add('was-validated');
-					}, false);
-				});
-			}, false);
-		})();
-		</script>
+		<br>
+		<br>
+		<br>
 		<br>
 		<br>
 		<br>
 		<footer class="page-footer font-small blue meu_footer-bg">
-			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis
-			</div>
+			<div class="footer-copyright text-center py-3">Criado por: Luana Chiodini e Nathalia Lais de Souza Kanis</div>
 		</footer>
+
+		<script>
+			(function() {
+				'use strict';
+				window.addEventListener('load', function() {
+					var forms = document.getElementsByClassName('needs-validation');
+					var validation = Array.prototype.filter.call(forms, function(form) {
+						form.addEventListener('submit', function(event) {
+							if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+							form.classList.add('was-validated');
+						}, false);
+					});
+				}, false);
+			})();
+		</script>
 	</body>
 </html>
