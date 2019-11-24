@@ -20,8 +20,8 @@ def cadastrar():
 	senha = request.form["senha"]
 	Usuario.create(nome=nome, email=email, senha=senha)
 	todos = Usuario.select()
-	# for i in todos:
-	# 	print(i.nome)
+	for i in todos:
+		print(i.nome, i.email)
 	return redirect("/")
 
 @app.route("/sobre")
